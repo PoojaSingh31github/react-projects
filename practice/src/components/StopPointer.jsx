@@ -111,7 +111,7 @@ export const StopWatch =()=>{
 
     return (
         <div className="px-10 py-20 bg-amber-300">
-            <h2 className="text-4xl font-light text-amber-950 font-stretch-150% text-center pb-10">{formatTime(time)}</h2>
+            <h2 className="text-5xl font-light text-amber-950 font-stretch-150% text-center pb-10">{formatTime(time)}</h2>
             <div className="bg-amber-400 border-2 border-amber-500 p-6 flex flex-col justify-center items-center rounded-2xl">
                 <input className="border rounded-xl p-2 w-1/2" type="number" placeholder="enter hour" name="hour" min={0}  value={timer.hour} onChange={handleChange} /> <br />
                 <input className="border rounded-xl p-2 w-1/2" type="number" placeholder="enter min" name="min" min={0} max={60} value={timer.min} onChange={handleChange} /><br />

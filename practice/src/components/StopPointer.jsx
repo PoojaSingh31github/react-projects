@@ -44,10 +44,6 @@ const handleReset =()=>{
 }
 
 
-
-
-
-
 export const StopWatch =()=>{
     const [timer, setTimer] = useState({
         "hour" : 0,  

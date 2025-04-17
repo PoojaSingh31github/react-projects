@@ -130,7 +130,7 @@ export default function StockPageComponent() {
       </div>
 
       {/* Details */}
-      {details && (
+      {details ? 
         <div className="bg-white p-6 rounded-xl shadow-md border w-full max-w-xl mx-auto space-y-2">
           <h2 className="text-xl font-semibold text-green-700 mb-2">
             📊 Stock Info
@@ -140,8 +140,12 @@ export default function StockPageComponent() {
           <p>📉 <b>Low:</b> ${parseFloat(details['04. low']).toFixed(2)}</p>
           <p>📦 <b>Volume:</b> {details['06. volume']}</p>
           <p>📍 <b>Change:</b> {details['10. change percent']}</p>
+        </div> :  
+        <div className="flex flex-col justify-center items-center h-screen w-full" >
+                <div className="text-9xl ">📈</div>
+                <h2 className="text-blue-400 text-3xl mt-5">search for stocks</h2>
         </div>
-      )}
+      }
 
       {/* Chart */}
       {renderChart()}

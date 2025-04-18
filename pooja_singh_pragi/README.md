@@ -45,13 +45,13 @@ readme_content = """
 # 🧪 API Integrations
 
 | API               | Purpose        | Description                                     |
-|------------------|----------------|-------------------------------------------------|
+|-------------------|----------------|-------------------------------------------------|
 | 🌦️ OpenWeatherMap | Weather        | Current + 7-day forecast with charts            |
 | 🏙️ GeoDB Cities    | Autocomplete   | City name suggestions for weather search       |
 | 📰 NewsAPI         | News           | Filtered news with infinite scroll             |
 | 💹 Alpha Vantage   | Finance        | Stock charts, prices, metrics                  |
 | 💻 GitHub API      | Bonus          | Repo stats, commits, contributors              |
-
+|--------------------|----------------|-------------------------------------------------|
 ## 📦 Setup Instructions
 
 1. **Clone the repo**
@@ -84,5 +84,3 @@ npm run dev
 Here’s a quick walkthrough of the dashboard and its features:
 
 [![Watch the demo](![home page](image.png))](https://youtu.be/Ugmvm22CmHk)
-
-> Replace the YouTube link with your actual demo video URL once it's uploaded.

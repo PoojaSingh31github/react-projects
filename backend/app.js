@@ -17,13 +17,7 @@ const connectDB = async ()=>{
 }
 connectDB()
 const app = express();
-// app.use(
-//     cors(
-//         {
-//             origin:[]
-//         }
-//     )
-// )
+app.use(cors());
 const PORT = process.env.PORT || 4000;
 app.get("/", (req,res)=>{
     res.status(200).json({message: "home page"})

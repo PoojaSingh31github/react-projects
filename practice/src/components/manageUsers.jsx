@@ -20,8 +20,9 @@ const ManageUser = ()=>{
     const addUser= async()=>{
       try {
           if(edit.isedit){
-            handleUpdate(edit.id)
-            setEdit({ isedit:true, id:""})
+            const res = await axios.put(`http://localhost:3000/api/user/updateUser/${edit.id}`, user);
+            console.log(res, "resssssssssssssssssss update")
+            setEdit({ isedit:false, id:""})
           }else{
               const res = await axios.post("http://localhost:3000/api/user/signup", user)
               console.log(res)
@@ -56,7 +57,7 @@ const ManageUser = ()=>{
     }
     const handleUpdate =async(id)=>{
         try {
-            const res =await axios.put(`http://localhost:3000/api/user/updateUser/${id}`, user);
+            
             console.log(res)
         } catch (error) {
             console.log(error)
@@ -85,7 +86,7 @@ return (
 
                 <div className="flex justify-around items-center text-2xl">
                     <button onClick={()=>handleDelete(ele._id)}>🗑️</button>
-                    <button onClick={()=> {setEdit({isedit:true, id:ele._id}); setUser({ username:ele.username, email:ele.email })}}>✒️</button>
+                    <button onClick={()=> {setEdit({isedit:true, id:ele._id}); setUser({ username:ele.username, email:ele.email, password:"" })}}>✒️</button>
                     </div>
                 </div>
             )):(<>no user found</>)

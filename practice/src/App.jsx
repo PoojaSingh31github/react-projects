@@ -4,6 +4,7 @@ import { TodoApp } from './components/todo'
 import { StopWatch, TimerComp } from './components/StopPointer'
 import Users from './page/user'
 import Counter from './components/couter'
+import  { CursorMoveComponent, SnakeCursor, SnakeCursor2 } from './components/cursor'
 
 function App() {
 
@@ -11,6 +12,9 @@ function App() {
     <>
 <div className='h-screen'>
   {/* <Counter/> */}
+  {/* <CursorMoveComponent/> */}
+  {/* <SnakeCursor/> */}
+  <SnakeCursor2/>
   <Users/>
 
 </div>
